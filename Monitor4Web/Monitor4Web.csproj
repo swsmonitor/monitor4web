@@ -21,7 +21,6 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\DataLibrary\DataLibrary.csproj" />
     <ProjectReference Include="..\SharedComponents\SharedComponents.csproj" />
   </ItemGroup>
 
