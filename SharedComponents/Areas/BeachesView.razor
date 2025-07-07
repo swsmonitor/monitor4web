@@ -1,0 +1,61 @@
+﻿@using Syncfusion.Blazor.Buttons  
+@using Syncfusion.Blazor.Lists  
+@using SharedComponents.SharedData  
+@using Models  
+
+<style>
+    .table-row-style {
+        cursor:pointer
+    }
+</style>
+<h3>Beaches</h3>  
+@if (Parent.Beaches == null || !Parent.Beaches.Any())  
+{  
+    <p><em>Loading...</em></p>  
+}  
+else  
+{
+    <div>  
+        <SfRadioButton Label="Whidbey" Name="island" Value="Whidbey" TChecked="string"  
+                       onchange=@OnChange @bind-Checked="island"></SfRadioButton>  
+        <SfRadioButton Label="Camano" Name="island" Value="Camano" TChecked="string"  
+                       onchange=@OnChange @bind-Checked="island"></SfRadioButton>  
+    </div>
+    <table class="table table-row-style">
+        <thead>  
+            <tr>  
+                <th>Beach</th>  
+                <th>Latitude</th>  
+                <th>Longitude</th>  
+                <th>Monitored?</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            @foreach (var beach in Parent.Beaches.Where(b => b.Island == island).OrderBy(bo => bo.BeachName))
+            {
+                <tr class="@GetRowclass(beach.ID)" @onclick="() => HandleRowClick(beach)">
+                    <td>@beach.BeachName</td>
+                    <td>@beach.Lat.ToString(".00000")</td>  
+                    <td>@beach.Long.ToString(".0000")</td>
+                    @if (beach.CurrentlyMonitored.HasValue && beach.CurrentlyMonitored.Value)
+                    {
+                        <td><i class="bi bi-circle-fill" style="color:green;" ></i></td>
+    
+                    }
+                    else
+                    {
+                        <td><i class="bi bi-circle-fill" style="color:darkred;" ></i></td>
+                    }
+                </tr> 
+            }  
+        </tbody>  
+    </table>  
+}
+
+@code {
+
+    private string GetRowclass(int id)
+    {
+        return (StaticData.SelectedBeach is not null && id == StaticData.SelectedBeach.ID) ? "table-active" : string.Empty;
+    }
+}

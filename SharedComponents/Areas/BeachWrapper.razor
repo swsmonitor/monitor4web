@@ -1,0 +1,57 @@
+﻿@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Layouts
+@using Models
+@using SharedData
+@using Syncfusion.Blazor.Cards
+
+<CascadingValue Value="this">
+    <div id="split">
+        <SfSplitter Height="100%" Width="100%" Orientation="Orientation.Horizontal" SeparatorSize="6">
+            <SplitterPanes>
+                <SplitterPane Size="50%" Min="20%" Max="70%">
+                    <SfSplitter Orientation="Orientation.Vertical" Height="100%" Width="100%" SeparatorSize="10">
+                        <SplitterPanes>
+                            <SplitterPane Size="50%" >
+                                <div class="p-4">
+                                    <BeachesView />
+                                </div>
+                            </SplitterPane>
+                            <SplitterPane Size="50%">
+                                <div class="p-4">
+                                    <BeachView/>
+                                </div>
+                            </SplitterPane>
+                        </SplitterPanes>
+                    </SfSplitter>
+                </SplitterPane>
+                <SplitterPane Size="50%" Min="30%" Max="80%">
+                    <div id="mapSplit">
+                        <SurveySiteView Title="Whidbey and Camano Island Survey Sites">
+                        </SurveySiteView>
+                    </div>
+                </SplitterPane>
+            </SplitterPanes>
+        </SfSplitter>
+    </div>
+</CascadingValue>
+@code {
+
+    public List<BeachData>? Beaches {get;set;}
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        StaticData.BeachesLoaded += SurveySitesLoaded;
+        await StaticData._semaphore.WaitAsync();
+        await StaticData.PreLoadBeachesAsync();
+    }
+    private void SurveySitesLoaded(IEnumerable<BeachData> beachData)
+    {
+        Beaches = beachData.ToList();
+        StaticData.BeachesLoaded -= SurveySitesLoaded;
+        StaticData._semaphore.Release();
+    }
+
+
+}

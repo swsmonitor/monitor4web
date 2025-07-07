@@ -1,0 +1,151 @@
+﻿@using Models
+@using SharedData
+@using Syncfusion.Blazor.Cards
+@using Syncfusion.Blazor.Buttons
+
+
+<div style="margin:20px,20px,0,0">
+    <div class='row e-card-layout'>
+            <SfCard ID="BeachCard">
+                <CardHeader Title="@SelectedBeach.BeachName" />
+                <CardContent>
+                    <table>
+
+                    @if (!SelectedBeach.IsMonitored)
+                    {
+                        <tr><td style="color:red">NOTE! This site is not currently monitored.</td></tr>
+                    }
+                    <tr><td style="font-weight:bold;font-size:20px">Driving Directions</td></tr>
+
+                    @if (!string.IsNullOrEmpty(SelectedBeach.BeachDirections))
+                    {
+                        <tr><td>@SelectedBeach.BeachDirections</td></tr>
+                    }
+                    @if (!string.IsNullOrEmpty(SelectedBeach.AdditionalNotes))
+                    {
+                        <tr><td style="font-weight:bold;font-size:20px">Notes</td></tr>
+                        <tr><td>@SelectedBeach.AdditionalNotes</td></tr>
+                    }
+                    @if (!string.IsNullOrEmpty(SelectedBeach.BulkHeadConstruction))
+                    {
+                        <tr>
+                            <td>
+                                <div style="display: inline">
+                                    <div style="font-weight:bold; display: inline-block; float:left; margin-right: 10px;">Bulkhead</div>
+                                    <div style="display: inline-block; ">@SelectedBeach.BulkHeadConstruction</div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr><td><i>No bulkhead described</i></td></tr>
+                    }
+
+                    @if (!string.IsNullOrEmpty(SelectedBeach.DecodedDnr))
+                    {
+                        <tr>
+                            <td>
+                                <div style="display: inline">
+                                    <div style="font-weight:bold; display: inline-block; float:left; margin-right: 10px;">DNR Classification</div>
+                                    <div style="display: inline-block; ">@SelectedBeach.DecodedDnr</div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>
+                            <div style="display: inline">
+                                <div style="font-weight:bold; display: inline-block; float:left; margin-right: 10px;">Tide Chart</div>
+                                <div style="display: inline-block; ">@SelectedBeach.DecodedTideChart</div>
+                            </div>
+                        </td>
+                    </tr>
+                    @if (string.IsNullOrEmpty(SelectedBeach.ProfileDirections))
+                    {
+                        <tr><td><i>No profile directions provided</i></td></tr>
+                    }
+                    else
+                    {
+                        <tr><td style="font-weight:bold;font-size:20px">Profile Directions</td></tr>
+                        <tr><td>@SelectedBeach.ProfileDirections</td></tr>
+                        @if (!string.IsNullOrEmpty(SelectedBeach.VertRef))
+                        {
+                            <tr><td style="font-weight:bold">Profile Vertical Reference</td></tr>
+                            <tr><td>@SelectedBeach.VertRef</td></tr>
+                        }
+                        @if (SelectedBeach.ProfileLineStart.HasValue)
+                        {
+                            <tr>
+                                <td>
+                                    <div style="display: inline">
+                                        <div style="font-weight:bold; display: inline-block; float:left; margin-right: 10px;">Profile Line Start</div>
+                                        <div style="display: inline-block; ">@SelectedBeach.ProfileLineStart</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        @if (SelectedBeach.SurveyWidth.HasValue)
+                        {
+                            <tr>
+                                <td>
+                                    <div style="display: inline">
+                                        <div style="font-weight:bold; display: inline-block; float:left; margin-right: 10px;">Survey Width</div>
+                                        <div style="display: inline-block; ">@SelectedBeach.SurveyWidth</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+
+                </table>
+                </CardContent>
+                <CardFooter>
+                    <CardFooterContent>
+                        <SfButton CssClass="e-btn e-primary">View Survey History</SfButton>
+                    </CardFooterContent>
+                </CardFooter>
+            </SfCard>
+    </div>
+</div>
+<style>
+    .e-card .e-card-header .e-card-header-caption .e-card-header-title {
+        font-size: 25px;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    .e-card .e-card-header .e-card-header-caption .e-card-sub-title {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+
+    .e-card .e-card-content {
+        padding-top: 5px;
+    }
+
+    .e-card-layout {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .TextCenter {
+        text-align: center;
+    }
+</style>
+@code {
+/*
+
+lastprofiledate
+nextprofiledate
+open up to show whole schedule
+
+*/
+}

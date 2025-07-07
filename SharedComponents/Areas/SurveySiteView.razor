@@ -1,0 +1,25 @@
+﻿@using Syncfusion.Blazor.Buttons
+@using Models
+<style>
+    #map {
+        height: 94vh;
+        width: 44vw;
+    }
+</style>
+<div id="map"></div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "Survey Sites Map"; // Default title for the map
+    [Parameter]
+    public double Latitude { get; set; } = SharedData.StaticData.MapCenterLatitude;
+    [Parameter]
+    public double Longitude { get; set; } = SharedData.StaticData.MapCenterLongitude;
+    [Parameter]
+    public int ZoomLevel { get; set; } = 11;
+    [Parameter]
+    public string Height { get; set; }
+    [Parameter]
+    public string Width { get; set; }
+
+}
