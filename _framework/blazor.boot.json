@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Monitor4Web",
   "resources": {
-    "hash": "sha256-DywnlfwDe/IzruqMfSeUNNmgRm5ynDCeVJuSFJaDplE=",
+    "hash": "sha256-tICAz/tU3HBl2qAxEyMrSHwp6siR9NhC4tb0yzQAK1o=",
     "fingerprinting": {
       "AirtableApiClient.es4ndd1tsq.wasm": "AirtableApiClient.wasm",
       "GeoJSON.Text.tx1xtvo5nm.wasm": "GeoJSON.Text.wasm",
@@ -100,9 +100,9 @@
       "System.ezrw3d5kw2.wasm": "System.wasm",
       "netstandard.tr5idcreub.wasm": "netstandard.wasm",
       "System.Private.CoreLib.pazbzkzsx2.wasm": "System.Private.CoreLib.wasm",
-      "DataLibrary.ud4lia433r.wasm": "DataLibrary.wasm",
-      "SharedComponents.qnm4v3wkx5.wasm": "SharedComponents.wasm",
-      "Monitor4Web.owh4yoxv69.wasm": "Monitor4Web.wasm",
+      "DataLibrary.320cxbs2nh.wasm": "DataLibrary.wasm",
+      "SharedComponents.kr4iorct4v.wasm": "SharedComponents.wasm",
+      "Monitor4Web.rqycp674f6.wasm": "Monitor4Web.wasm",
       "dotnet.native.54718fdref.js": "dotnet.native.js",
       "dotnet.native.8fg829i1vt.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -225,9 +225,9 @@
       "System.Xml.XDocument.2zthwj8j9g.wasm": "sha256-/j2bxCGujwFZoav+qfLhqiKV/cxU2OzPXOehq/vdoB4=",
       "System.ezrw3d5kw2.wasm": "sha256-ViNRvhyxlTugIlqJHamw/HwbXlg/YWcrANmxuTM0tfg=",
       "netstandard.tr5idcreub.wasm": "sha256-ufqRDXpD4UsPKCeEIZ0zTeEqu57v68s+UBt87SiSfv4=",
-      "DataLibrary.ud4lia433r.wasm": "sha256-jjzzgbnAQjuV9QeY6f1vNMzX/T10CsyZr90q/+G3JZA=",
-      "SharedComponents.qnm4v3wkx5.wasm": "sha256-Skleq5oV/D3sFV1jkCD9yFiLiefHrvZ7bhrAmJFS06M=",
-      "Monitor4Web.owh4yoxv69.wasm": "sha256-WDqBqh7cGc+X2kJDjgOvJ1cnAAIOHYEo+/VlscjMbQU="
+      "DataLibrary.320cxbs2nh.wasm": "sha256-S5goPLkSwCF8hO3rbxRYew7xr/CAiQIC1X+AfXgZLgM=",
+      "SharedComponents.kr4iorct4v.wasm": "sha256-oEyVRLOZkOp7Xv7aLKqvpe8ZdYZwFtX/M9tLZUWJSu0=",
+      "Monitor4Web.rqycp674f6.wasm": "sha256-HcSs/+WJZmiIqFWVWGI5eovlyqys4ev021hqJ0C6dXg="
     }
   },
   "cacheBootResources": true,

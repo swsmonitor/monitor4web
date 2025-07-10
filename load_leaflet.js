@@ -54,9 +54,13 @@ export function load_map(dotNetHelper, midlng, midlat, zoom, geojsonString) {
     //});
     return "Map loaded"
 }
-var testEnvironmentVariable = "here";
-export function get_test_environment_variable() {
-    return testEnvironmentVariable;
+export async function show_marker(id) {
+    var marker = window._markers[id];
+    marker.setOpacity(1);
+}
+export async function hide_marker(id) {
+    var marker = window._markers[id];
+    marker.setOpacity(.1);
 }
 export async function change_marker_to_original(id) {
     var marker = window._markers[id];
@@ -117,5 +121,4 @@ export async function add_marker(dotNetHelper, lat, lng, isActive, popupText, id
         // Call the .NET method when marker is clicked
         dotNetHelper.invokeMethodAsync('OnMarkerClick', lat, lng, id);
     });
-
 }
