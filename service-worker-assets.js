@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "+HtRRGgV",
+  "version": "sB68MCpQ",
   "assets": [
     {
       "hash": "sha256-jnIQrl1R+CqIyAtmsVh7eYEEhVuAIJp2h6LuCFhYAOA=",
@@ -402,8 +402,8 @@ self.assetsManifest = {
       "url": "_framework/AirtableApiClient.es4ndd1tsq.wasm"
     },
     {
-      "hash": "sha256-jjzzgbnAQjuV9QeY6f1vNMzX/T10CsyZr90q/+G3JZA=",
-      "url": "_framework/DataLibrary.ud4lia433r.wasm"
+      "hash": "sha256-S5goPLkSwCF8hO3rbxRYew7xr/CAiQIC1X+AfXgZLgM=",
+      "url": "_framework/DataLibrary.320cxbs2nh.wasm"
     },
     {
       "hash": "sha256-7573prLfEpHIQPIJ+z8t01OhWnQNjqjywLLHcqiGBFI=",
@@ -474,8 +474,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.opw2a6fb0s.wasm"
     },
     {
-      "hash": "sha256-WDqBqh7cGc+X2kJDjgOvJ1cnAAIOHYEo+/VlscjMbQU=",
-      "url": "_framework/Monitor4Web.owh4yoxv69.wasm"
+      "hash": "sha256-HcSs/+WJZmiIqFWVWGI5eovlyqys4ev021hqJ0C6dXg=",
+      "url": "_framework/Monitor4Web.rqycp674f6.wasm"
     },
     {
       "hash": "sha256-PEgMc0xKFVgliQa4bcvzoMUHQhaVF8b6099qCWT6TA0=",
@@ -486,8 +486,8 @@ self.assetsManifest = {
       "url": "_framework/Newtonsoft.Json.qkbufwhni2.wasm"
     },
     {
-      "hash": "sha256-Skleq5oV/D3sFV1jkCD9yFiLiefHrvZ7bhrAmJFS06M=",
-      "url": "_framework/SharedComponents.qnm4v3wkx5.wasm"
+      "hash": "sha256-oEyVRLOZkOp7Xv7aLKqvpe8ZdYZwFtX/M9tLZUWJSu0=",
+      "url": "_framework/SharedComponents.kr4iorct4v.wasm"
     },
     {
       "hash": "sha256-9oxLfQJcNl5SSeAdjx5K9Ad6a9x45xqLzq8xjLVd9yA=",
@@ -794,7 +794,7 @@ self.assetsManifest = {
       "url": "_framework/System.ezrw3d5kw2.wasm"
     },
     {
-      "hash": "sha256-D1LjjAfP9OuN3tRX3LduURKl8DHD+43GpjIbXGvhaEA=",
+      "hash": "sha256-4VuyWT6IdVzLXiAswz3G1T4SVOfxLSXIV7SjXIyOUyI=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -882,7 +882,7 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-E/GrmyI/HOKFBy16n71ltTG1bMzdiHXYITJm068G67U=",
+      "hash": "sha256-Cwh62rEEESURmDu6GA9G3DSc/dDVN1UFIUAe1HxyeHA=",
       "url": "index.html"
     },
     {
@@ -1074,7 +1074,7 @@ self.assetsManifest = {
       "url": "lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "hash": "sha256-jsIww6pZDzcm+mKiSFNY4x1gALRpx1EfS3MhH4FZRmw=",
+      "hash": "sha256-Ok9uXoDsl/4+g3+TGcxEb6sDJS7xqcEr4ce17H3kcEQ=",
       "url": "load_leaflet.js"
     },
     {
